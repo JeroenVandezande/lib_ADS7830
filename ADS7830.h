@@ -38,8 +38,11 @@ struct ADS7830_t
 	uint8_t _conf;
 	//PUBLIC INSTANCE MEMBERS
 	uint8_t I2CAddress;
+	float ReferenceVoltage;
 	//points to a function to handle the I2C writes
 	LL_I2CMaster_WriteMethod_t i2cWriteDataMethod;
+	//points to a function to handle the I2C reads
+	LL_I2CMaster_ReadMethod_t i2cReadDataMethod;
 };
 
 int ADS7830_Init(struct ADS7830_t* instance, bool A0, bool A1, enum ADS7830_PowerDown_t powerMode);
