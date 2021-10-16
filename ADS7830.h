@@ -46,7 +46,7 @@ struct ADS7830_t
 };
 
 int ADS7830_Init(struct ADS7830_t* instance, bool A0, bool A1, enum ADS7830_PowerDown_t powerMode);
-uint8_t ADS7830_ReadChannel(struct ADS7830_t* instance, enum ADS7830_Channel_t channel);
+float ADS7830_ReadChannel(struct ADS7830_t* instance, enum ADS7830_Channel_t channel);
 
 
 #endif //LIB_ADS7830_LIBRARY_H
